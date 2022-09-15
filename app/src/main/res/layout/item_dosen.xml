@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dosen"
+            type="com.example.chapter4topic2.databindingrecyclerview.Dosen" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtNamaDosen"
+                android:text="@{dosen.nama}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txtNIP"
+                android:text="@{dosen.nip}"
+                android:layout_below="@id/txtNamaDosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/imgDosen"
+                app:imageResource= "@{dosen.img}"
+                android:layout_alignParentRight="true"
+                android:layout_width="60dp"
+                android:layout_height="50dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
